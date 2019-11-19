@@ -1,0 +1,35 @@
+.events__heading {
+  color: #00b0bd;
+  margin-left: 5px;
+}
+
+.events__events-grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.events__event-tile {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  background: #00b0bd;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.events__event-tile:focus {
+  outline: none;
+  background: #fff;
+  border: 2px solid #00b0bd;
+}
+
+.events__event-tile h3 {
+  margin: 0;
+  color: white;
+}
+
+.events__event-tile:focus h3 {
+  color: #00b0bd;
+}

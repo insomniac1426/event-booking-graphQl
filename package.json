@@ -5,18 +5,46 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/app.js"
+    "start": "nodemon server/app.js",
+    "start-web": "webpack-dev-server --config webpack.config.js",
+    "build-web": "webpack --config webpack.config.js"
   },
   "author": "Yash Bansal",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-react-jsx": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "css-loader": "^3.2.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
+    "file-loader": "^4.2.0",
     "graphql": "^14.5.8",
+    "html-webpack-plugin": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.11",
-    "nodemon": "^1.19.4"
-  }
+    "nodemon": "^1.19.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.7.0",
+    "clean-webpack-plugin": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insomniac1426/event-booking-graphQl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/insomniac1426/event-booking-graphQl/issues"
+  },
+  "homepage": "https://github.com/insomniac1426/event-booking-graphQl#readme"
 }
