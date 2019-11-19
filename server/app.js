@@ -18,6 +18,25 @@ const PORT = 3000;
 // middlewares
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  try {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "PUT, POST, OPTIONS");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization"
+    );
+
+    if (req.method === "OPTIONS") {
+      res.sendStatus(200);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
+  return next();
+});
+
 app.use(isAuth);
 
 app.use(
